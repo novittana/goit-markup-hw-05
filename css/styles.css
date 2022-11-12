@@ -153,6 +153,10 @@ ul {
 
 .header-link {
   color: var(--first--link-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .top-contacts-list {
@@ -199,6 +203,12 @@ ul {
 .header-link:hover,
 .header-link:focus {
   color: var(--active-link-color);
+}
+
+.top-email-link {
+  transition-property: fill, color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .top-email-link:focus,
@@ -286,6 +296,10 @@ ul {
   padding-bottom: 10px;
   padding-left: 32px;
   min-width: 216px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -418,6 +432,12 @@ ul {
   fill: #afb1b8;
 }
 
+.soc-network-link .soc-net-icon {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .soc-network-link:hover .soc-net-icon,
 .soc-network-link:focus .soc-net-icon {
   fill: #fff;
@@ -448,6 +468,10 @@ ul {
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-logo {
@@ -457,6 +481,12 @@ ul {
 .client-link:hover,
 .client-link:focus {
   border: 1px solid #2196f3;
+}
+
+.client-link .client-logo {
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover .client-logo,
@@ -494,12 +524,19 @@ ul {
 
 .footer-link {
   color: var(--third-link-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link-mail,
 .footer-link-tel {
   color: var(--third-link-color);
   opacity: 0.6;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover,
@@ -544,12 +581,14 @@ ul {
   color: #ffffff;
 }
 
-/* .footer-icon-link {
-   margin-top: 0;
-} */
-
 .footer-icon-link .soc-net-icon {
   fill: currentColor;
+}
+
+.soc-network-link {
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-network-link:hover,
@@ -565,7 +604,9 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   top: 0;
-  transition: opacity, visibility;
+  transition-property: transform, visibility, opacity;
+  transition-duration: 250ms;
+  transform: scale(1);
 }
 
 .modal {
@@ -579,7 +620,12 @@ ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transrorm 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* .backdrop.is-hidden.modal {
+  transform: translate(-50%, -50%) scale();
+} */
 
 .close-btn {
   height: 30px;
@@ -599,6 +645,11 @@ ul {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+
+  transition-property: transform, visibility, opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.5);
 }
 
 /*-----------------PORTFOLIO-----------------------*/
@@ -621,6 +672,10 @@ ul {
   padding-right: 22px;
   padding-bottom: 6px;
   padding-left: 22px;
+
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-filter {
@@ -637,6 +692,12 @@ ul {
   background-color: var(--active-btn-background-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.project-item {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-item:hover,
@@ -661,6 +722,12 @@ ul {
   width: calc((100% - 30px * 2) / 3);
 }
 
+.project-item .hover-img-text {
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .project-item:hover .hover-img-text {
   transform: translateY(0);
 }
@@ -682,7 +749,8 @@ ul {
   background-color: rgba(33, 150, 243, 0.9);
   height: 100%;
   transform: translateY(100%);
-  transition: transform 300ms ease;
+  transition: transform 250ms ease;
+  overflow: auto;
 }
 
 .project-title {
